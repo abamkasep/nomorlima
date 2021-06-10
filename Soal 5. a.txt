@@ -1,0 +1,3 @@
+SELECT FullName
+FROM Person JOIN VisitHistory ON Person.RecordKey = VisitHistory.RecordKey
+WHERE VisitHistory.PoliName = 'Obgyn' AND (TIMESTAMPDIFF(YEAR, BirthDate, CURDATE()) - Person.BirthDate) >= 20 AND <= 30   
